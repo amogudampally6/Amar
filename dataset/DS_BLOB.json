@@ -1,0 +1,41 @@
+{
+	"name": "DS_BLOB",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_BLOB_SQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "empfile.csv",
+				"container": "inbox"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Emp ID",
+				"type": "String"
+			},
+			{
+				"name": "Emp name",
+				"type": "String"
+			},
+			{
+				"name": "Emp age",
+				"type": "String"
+			},
+			{
+				"name": "Emp address",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
